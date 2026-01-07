@@ -12,20 +12,41 @@
     font-style: normal;
 }
 
-body {
+/* body {
     font-family: "Avigul", sans-serif;
-    background-image: url("media/firstPage.svg");
-    /* background-size: cover; */
+    background-image: url("media/backgroundnew1.svg");
+    background-size: cover;
+    background-position: center;
+
     background-repeat: no-repeat;
     direction: rtl;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 
+} */
+
+body {
+    font-family: "Avigul", sans-serif;
+    direction: rtl;
+    margin: 0;
+    /* מבטיח שאין רווחים מסביב */
+    height: 100vh;
+    /* גובה מלא של המסך */
+    width: 100vw;
+    /* רוחב מלא של המסך */
+    background-image: url('media/backgroundnew1.svg');
+    background-size: cover;
+    /* או contain */
+    background-position: center center;
+    /* תמיד ממקם את התמונה במרכז */
+    background-repeat: no-repeat;
+    /* מונע חזרות */
 }
 
 html,
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -83,8 +104,26 @@ body {
     cursor: pointer;
 }
 
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("media/backgroundnew1.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+
+#app {
+    position: relative;
+    z-index: 1;
+}
+
 .text-style {
-    display: none;
+    /* display: none; */
     position: absolute;
     top: 49%;
     left: 50%;
