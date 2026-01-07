@@ -5,7 +5,7 @@ let [
     firstPage, chaptersContainer, logo, introduction1, introduction2, introduction3, introduction4, intro4tooltip,
     introduction5, chapter1, chapterfirst2, chapterfirst3, chapterfirst4, box, chapterfirst5, chapterfirst6,
     chapterfirst7, chapterfirst8, chapterfirst9, chapterfirst10, chapterSecond, chapterfirst11,
-    chapterSecond1, chapterSecond2, chapterSecond3, chapterSecond4, chapterSecond5, chapterSecond6, chapterSecond7, chapterThree, chapterThree1, chapterThree2, chapterThree3, chapterThree4, titleGame, container, chapterThree5, chapterThree6, chapterThree7, chapterThree8, chapterThree9, chapterThree10, chapterThree11, chapterThree12, chapterThree13, chapterThree14, chapterThree15, chapterFour, chapterFour1, chapterFour2, chapterFour3, chapterFour4, chapterFour5, chapterFour6, chapterFour7, chapterFour8, chapterFour9, chapterFour10, chapterFour11, chapterFour12, chapterFour13, chapterFour14, chapterFour15, chapterFifth, chapterFifth1, chapterFifth2, chapterFifth3, chapterFifth4, chapterFifth5, chapterFifth6, chpterFifthGame1, answersContainer, gameContainer, button, gameFifthAns, chpterFifthGame2, chpterFifthGame3, chapterFifth7, chapterFifth8, chapterFifth9, chapterFifth10
+    chapterSecond1, chapterSecond2, chapterSecond3, chapterSecond4, chapterSecond5, chapterSecond6, chapterSecond7, chapterThree, chapterThree1, chapterThree2, chapterThree3, chapterThree4, titleGame, container, chapterThree5, chapterThree6, chapterThree7, chapterThree8, chapterThree9, chapterThree10, chapterThree11, chapterThree12, chapterThree13, chapterThree14, chapterThree15, chapterFour, chapterFour1, chapterFour2, chapterFour3, chapterFour4, chapterFour5, chapterFour6, chapterFour7, chapterFour8, chapterFour9, chapterFour10, chapterFour11, chapterFour12, chapterFour13, chapterFour14, chapterFour15, chapterFifth, chapterFifth1, chapterFifth2, chapterFifth3, chapterFifth4, chapterFifth5, chapterFifth6, chpterFifthGame1, answersContainer, gameContainer, button, gameFifthAns, chpterFifthGame2, chpterFifthGame3, chapterFifth7, chapterFifth8, chapterFifth9, chapterFifth10, box2
 ] = [];
 
 window.addEventListener("load", () => {
@@ -410,7 +410,6 @@ window.addEventListener("load", () => {
     button.style.pointerEvents = "auto";
     document.body.appendChild(button);
 
-
     const correctAnswer = "60";
     const answers = ["80", "40", "60"];
 
@@ -424,7 +423,7 @@ window.addEventListener("load", () => {
     document.body.appendChild(gameContainer);
 
     // --- הצגת התמונה הראשונית ---  
-    chpterFifthGame1.style.width = "100%";
+    chpterFifthGame1.style.width = "80%";
     chpterFifthGame1.style.height = "auto";
     gameContainer.appendChild(chpterFifthGame1);
 
@@ -475,14 +474,120 @@ window.addEventListener("load", () => {
     chapterFifth10.src = "media/chapterFifth10.svg";
     chapterFifth10.classList.add("text-style");
     document.body.appendChild(chapterFifth10);
+    //     box = document.createElement("div");
+    //     box.classList.add("scroll-box-style");
+    //     box.innerHTML = `
+    // <div class="scroll-box">
+    //   <div class="scroll-inner">
+    //     <p>
+    //       <span class="bold-title">• מבנה קשיח ורציף:</span>
+    //       <span class="text-regular">
+    //         הממ"ד נבנה מבטון מזוין בצורת תיבה אחידה, ללא קורות או עמודים נוספים, וכל חלקיו רתומים באופן רציף.
+    //       </span>
+    //     </p>
+
+    //     <p>
+    //       <span class="bold-title">• משטחים מישוריים:</span>
+    //       <span class="text-regular">
+    //         רצפה, קירות ותקרה יהיו ישרים וללא חריגות או בליטות.
+    //       </span>
+    //     </p>
+
+    //     <p>
+    //       <span class="bold-title">• יציבות:</span>
+    //       <span class="text-regular">
+    //         קירות הממ"ד בכל הקומות רציפים עד היסודות, להבטחת עמידות גם במקרה קריסת המבנה או חלקו כתוצאה מהשפעות הדף.
+    //       </span>
+    //     </p>
+
+    //     <p>
+    //       <span class="bold-title">• דרישות מילוט:</span>
+    //       <span class="text-regular">
+    //         לפחות שני פתחי מילוט (חלון ודלת או שתי דלתות) במיקומים שונים ולקירות שונים.
+    //       </span>
+    //     </p>
+
+    //     <p>
+    //       <span class="bold-title"> • אטימות מלאה:</span>
+    //       <span class="text-regular">
+    //         הממ"ד יהיה אטום לחלוטין, החלונות והדלתות מותקנים עם אמצעי אטימה להגנה מפני איומים ביולוגיים, כימיים וזליגת הדף.
+    //       </span>
+    //     </p>
+
+    //     <p>
+    //       <span class="bold-title">• שימוש מוגדר:</span>
+    //       <span class="text-regular">
+    //         הממ"ד ישמש כחלל בטיחותי, ויכול להיות דו-תכליתי כגון חדר מגורים. אין להשתמש בו כחלל למטבח, אמבטיה או שירותים.
+    //       </span>
+    //     </p>
+    //   </div>
+    // </div>`;
+    //     document.body.appendChild(box);
+    box2 = document.createElement("div");
+    box2.classList.add("scroll-box2");
+
+    box2.innerHTML = `
+<div class="scroll-inner2">
+
+    <p>
+        <span class="text-regular">
+נבחן חלק מתוכנית של ממ"ד, נתמקד בצינור כבילה בקוטר 4" המופיע בקיר הימני העליון (מסומן בעיגול כחול) ונבדוק האם הוא עומד בדרישות הטבלה.
+שימו לב: המדידות מתבצעות מאמצע הצינור.
+        </span>
+    </p>
+
+    <p>
+        <span class="bold-title">1.  מרחק מהקיר הניצב</span><br>
+        <span class="text-regular">
+לפי הטבלה: נדרש מינימום 25 ס"מ.
+בתוכנית: המרחק בפועל 40 ס"מ.
+     עומד בדרישה
+        </span>
+    </p>
+
+    <p>
+        <span class="bold-title">2. מרחק מצינור כניסת אוויר (מסומן בעיגול ירוק)</span><br>
+        <span class="text-regular">
+ניתן לראות צינור כניסת אוויר בקיר הימני התחתון.
+לפי הטבלה: עבור שני צינורות בקוטר 4", המרחק המינימלי הוא 40 ס"מ.
+בתוכנית: המרחק בפועל 361 ס"מ (מסומן בקו מידה כחול מודגש מצד ימין)
+     עומד בדרישה.
+        </span>
+    </p>
+
+    <p>
+        <span class="text-regular">
+בתוכנית: המרחק בפועל 361 ס"מ (מסומן בקו מידה כחול מודגש מצד ימין)
+ עומד בדרישה.
+        </span>
+    </p>
+
+    <p>
+        <span class="bold-title">3. גובה הצינור מהתקרה והרצפה</span><br>
+        <span class="text-regular">
+לפי הטבלה: יש לשמור על מרחק מינימום 25 ס"מ מהתקרה ו190 ס"מ מהרצפה 
+בתוכנית: גובה הצינור מהרצפה 235 ס"מ → תקין.
+בגלל שהצינור לא מופיע בחתך (בשקופית 54) נבין את הגובה על סמך הנתונים הקיימים:
+גובה החלל (מהחתך בשקופית 54): 270 ס"מ.
+נכן נחסיר מגובה החלל את הגובה של הצינור מהרצפה 
+חישוב המרחק מהתקרה: ‎270 – 235 = 35 ס"מ.
+לכן המרחק בין אמצע הצינור לתקרה הוא 35 ס"מ משמע המרחק תקין 
+      עומד בדרישה.
+        </span>
+    </p>
+
+</div>
+`;
+
+    document.body.appendChild(box2);
 
     [
         firstPage, logo, introduction1, introduction2, introduction3, introduction4, intro4tooltip,
         introduction5, chapter1, chapterfirst2, chapterfirst3, chapterfirst4, chapterfirst5,
         chapterfirst6, box, chapterfirst7, chapterfirst8, chapterfirst9, chapterfirst10,
-        chapterfirst11, chapterSecond, chapterSecond1, chapterSecond2, chapterSecond3, chapterSecond4, chapterSecond5, chapterSecond6, chapterSecond7, chapterThree, chapterThree1, chapterThree2, chapterThree3, chapterThree4, titleGame, container, chapterThree5, chapterThree6, chapterThree7, chapterThree8, chapterThree9, chapterThree10, chapterThree11, chapterThree12, chapterThree13, chapterThree14, chapterThree15, chapterFour, chapterFour1, chapterFour2, chapterFour3, chapterFour4, chapterFour5, chapterFour6, chapterFour7, chapterFour8, chapterFour9, chapterFour10, chapterFour11, chapterFour12, chapterFour13, chapterFour14, chapterFour15, chapterFifth, chapterFifth1, chapterFifth2, chapterFifth3, chapterFifth4, chapterFifth5, chapterFifth6, chpterFifthGame1, answersContainer, gameContainer, button, gameFifthAns, chpterFifthGame2, chpterFifthGame3, chapterFifth7, chapterFifth8, chapterFifth9, chapterFifth10
+        chapterfirst11, chapterSecond, chapterSecond1, chapterSecond2, chapterSecond3, chapterSecond4, chapterSecond5, chapterSecond6, chapterSecond7, chapterThree, chapterThree1, chapterThree2, chapterThree3, chapterThree4, titleGame, container, chapterThree5, chapterThree6, chapterThree7, chapterThree8, chapterThree9, chapterThree10, chapterThree11, chapterThree12, chapterThree13, chapterThree14, chapterThree15, chapterFour, chapterFour1, chapterFour2, chapterFour3, chapterFour4, chapterFour5, chapterFour6, chapterFour7, chapterFour8, chapterFour9, chapterFour10, chapterFour11, chapterFour12, chapterFour13, chapterFour14, chapterFour15, chapterFifth, chapterFifth1, chapterFifth2, chapterFifth3, chapterFifth4, chapterFifth5, chapterFifth6, chpterFifthGame1, answersContainer, gameContainer, button, gameFifthAns, chpterFifthGame2, chpterFifthGame3, chapterFifth7, chapterFifth8, chapterFifth9, chapterFifth10, box2
     ].forEach(el => el && (el.style.display = "none"));
-    screens = [showHome, showIntro, showintro1, showintro2, showintro3, showintro4, showFirstchapter1, showFirstchapter2, showFirstchapter3, showFirstchapter4, showFirstchapter5, showFirstchapter6, showFirstchapter7, showFirstchapter8, showFirstchapter9, showFirstchapter10, showFirstchapter11, showSecondChpater, showSecondChpater1, showSecondChpater2, showSecondChpater3, showSecondChpater4, showSecondChpater5, showSecondChpater6, showSecondChpater7, showThreeChapter, showThreeChapter1, showThreeChapter2, showThreeChapter3, showThreeChapter4, showThreeChapterGame, showThreeChapter5, showThreeChapter6, showThreeChapter7, showThreeChapter8, showThreeChapter9, showThreeChapter10, showThreeChapter11, showThreeChapter12, showThreeChapter13, showThreeChapter14, showThreeChapterGame, showThreeChapter15, showchapterFour, showchapterFour1, showchapterFour2, showchapterFour3, showchapterFour4, showchapterFour5, showchapterFour6, showchapterFour7, showchapterFour8, showchapterFour9, showchapterFour10, showchapterFour11, showchapterFour12, showchapterFour13, showchapterFour14, showchapterFour15, showchapterFifth, showchapterFifth1, showchapterFifth2, showchapterFifth3, showchapterFifth4, showchapterFifth5, showchapterFifth6, showchpterFifthGame1, showchpterFifthGame2, showchpterFifthGame3, showchapterFifth7, showchapterFifth8, showchapterFifth9, showchapterFifth10];
+    screens = [showHome, showIntro, showintro1, showintro2, showintro3, showintro4, showFirstchapter1, showFirstchapter2, showFirstchapter3, showFirstchapter4, showFirstchapter5, showFirstchapter6, showFirstchapter7, showFirstchapter8, showFirstchapter9, showFirstchapter10, showFirstchapter11, showSecondChpater, showSecondChpater1, showSecondChpater2, showSecondChpater3, showSecondChpater4, showSecondChpater5, showSecondChpater6, showSecondChpater7, showThreeChapter, showThreeChapter1, showThreeChapter2, showThreeChapter3, showThreeChapter4, showThreeChapterGame, showThreeChapter5, showThreeChapter6, showThreeChapter7, showThreeChapter8, showThreeChapter9, showThreeChapter10, showThreeChapter11, showThreeChapter12, showThreeChapter13, showThreeChapter14, showThreeChapterGame, showThreeChapter15, showchapterFour, showchapterFour1, showchapterFour2, showchapterFour3, showchapterFour4, showchapterFour5, showchapterFour6, showchapterFour7, showchapterFour8, showchapterFour9, showchapterFour11, showchapterFour12, showchapterFour13, showchapterFour14, showchapterFour15, showchapterFifth, showchapterFifth1, showchapterFifth2, showchapterFifth3, showchapterFifth4, showchapterFifth5, showchapterFifth6, showchpterFifthGame1, showchpterFifthGame2, showchpterFifthGame3, showchapterFifth7, showchapterFifth8, showchapterFifth9, showchapterFifth10];
     renderPage();
 });
 
@@ -501,7 +606,7 @@ function renderPage() {
         firstPage, logo, introduction1, introduction2, introduction3, introduction4, intro4tooltip,
         introduction5, chapter1, chapterfirst2, chapterfirst3, chapterfirst4, chapterfirst5,
         chapterfirst6, box, chapterfirst7, chapterfirst8, chapterfirst9, chapterfirst10,
-        chapterfirst11, chapterSecond, chapterSecond1, chapterSecond2, chapterSecond3, chapterSecond4, chapterSecond5, chapterSecond6, chapterSecond7, chapterThree, chapterThree1, chapterThree2, chapterThree3, chapterThree4, titleGame, container, chapterThree5, chapterThree6, chapterThree7, chapterThree8, chapterThree9, chapterThree10, chapterThree11, chapterThree12, chapterThree13, chapterThree14, chapterThree15, chapterFour, chapterFour1, chapterFour2, chapterFour3, chapterFour4, chapterFour5, chapterFour6, chapterFour7, chapterFour8, chapterFour9, chapterFour10, chapterFour11, chapterFour12, chapterFour13, chapterFour14, chapterFour15, chapterFifth, chapterFifth1, chapterFifth2, chapterFifth3, chapterFifth4, chapterFifth5, chapterFifth6, chpterFifthGame1, answersContainer, gameContainer, button, gameFifthAns, chpterFifthGame2, chpterFifthGame3, chapterFifth7, chapterFifth8, chapterFifth9, chapterFifth10
+        chapterfirst11, chapterSecond, chapterSecond1, chapterSecond2, chapterSecond3, chapterSecond4, chapterSecond5, chapterSecond6, chapterSecond7, chapterThree, chapterThree1, chapterThree2, chapterThree3, chapterThree4, titleGame, container, chapterThree5, chapterThree6, chapterThree7, chapterThree8, chapterThree9, chapterThree10, chapterThree11, chapterThree12, chapterThree13, chapterThree14, chapterThree15, chapterFour, chapterFour1, chapterFour2, chapterFour3, chapterFour4, chapterFour5, chapterFour6, chapterFour7, chapterFour8, chapterFour9, chapterFour10, chapterFour11, chapterFour12, chapterFour13, chapterFour14, chapterFour15, chapterFifth, chapterFifth1, chapterFifth2, chapterFifth3, chapterFifth4, chapterFifth5, chapterFifth6, chpterFifthGame1, answersContainer, gameContainer, button, gameFifthAns, chpterFifthGame2, chpterFifthGame3, chapterFifth7, chapterFifth8, chapterFifth9, chapterFifth10, box2
     ].forEach(el => el && (el.style.display = "none"));
 
     // מציגים את המסך הנוכחי
@@ -513,7 +618,7 @@ function renderPage() {
 }
 
 function hideAllScreens() {
-    document.querySelectorAll(".text-style, .scroll-box-style, .tooltip-intro")
+    document.querySelectorAll(".text-style, .scroll-box-style, .scroll-box2-style, .tooltip-intro")
         .forEach(el => el.style.display = "none");
 }
 
@@ -1544,20 +1649,22 @@ function showchapterFour8() {
 function showchapterFour9() {
     hideAllScreens();
     logo.style.zIndex = "3";
-    chapterFour9.style.display = "block";
-    logo.style.display = "block";
-    chapterFour9.style.width = "90%";
-    chapterFour9.style.top = "46%";
-}
-
-function showchapterFour10() {
-    hideAllScreens();
-    logo.style.zIndex = "3";
     chapterFour10.style.display = "block";
     logo.style.display = "block";
-    chapterFour10.style.width = "90%";
+    chapterFour10.style.width = "70%";
     chapterFour10.style.top = "46%";
+    box2.style.display = "block";
+
 }
+
+// function showchapterFour10() {
+//     hideAllScreens();
+//     logo.style.zIndex = "3";
+//     chapterFour10.style.display = "block";
+//     logo.style.display = "block";
+//     chapterFour10.style.width = "90%";
+//     chapterFour10.style.top = "46%";
+// }
 
 function showchapterFour11() {
     hideAllScreens();
@@ -1673,18 +1780,18 @@ function showchapterFifth6() {
 
 function showchpterFifthGame1() {
     hideAllScreens();
+
     logo.style.zIndex = "3";
     logo.style.display = "block";
-
     chpterFifthGame1.style.display = "block";
     gameFifthAns.style.display = "none";
 
     const correctAnswer = "225 ס\"מ";
     const answers = ["225 ס\"מ", "235 ס\"מ", "230 ס\"מ"];
     gameContainer.style.display = "block";
-
     chpterFifthGame1.style.width = "100%";
     chpterFifthGame1.style.height = "auto";
+
     gameContainer.appendChild(chpterFifthGame1);
 
     gameFifthAns.style.width = "100%";
@@ -1728,7 +1835,7 @@ function showchpterFifthGame2() {
     const correctAnswer = "60";
     const answers = ["80", "40", "60"];
     gameContainer.style.display = "block";
-    chpterFifthGame2.style.width = "100%";
+    chpterFifthGame2.style.width = "80%";
     chpterFifthGame2.style.height = "auto";
     gameContainer.appendChild(chpterFifthGame2);
     answersContainer.style.display = "flex";
@@ -1768,7 +1875,7 @@ function showchpterFifthGame3() {
     const correctAnswer = "180";
     const answers = ["200", "180", "190"];
     gameContainer.style.display = "block";
-    chpterFifthGame3.style.width = "100%";
+    chpterFifthGame3.style.width = "80%";
     chpterFifthGame3.style.height = "auto";
     gameContainer.appendChild(chpterFifthGame3);
     answersContainer.style.display = "flex";
@@ -1797,7 +1904,6 @@ function showchpterFifthGame3() {
 }
 function createNewIntroGameButton() {
 
-    hideAllScreens();
     button.style.display = "block";
     let overlay = document.getElementById("introGameOverlayFifth");
     if (overlay) return;
@@ -1836,7 +1942,7 @@ function createNewIntroGameButton() {
     const img = document.createElement("img");
     img.src = "media/introGameChapterFifth.svg";
     img.alt = "הוראות משחק";
-    img.style.width = "100%";
+    img.style.width = "70%";
     modal.appendChild(closeBtn);
     modal.appendChild(img);
     overlay.appendChild(modal);
