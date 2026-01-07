@@ -46,7 +46,8 @@ window.addEventListener("load", () => {
     firstPage = document.createElement("img");
     firstPage.src = "media/firstPage.svg";
     firstPage.classList.add("text-style");
-    document.body.appendChild(firstPage);
+    firstPage.style.top = "45vh";
+    document.getElementById("app").appendChild(firstPage);
 
     logo = document.createElement("img");
     logo.src = "media/iconMigun.svg";
@@ -790,7 +791,7 @@ function showThreeChapter2() {
     logo.style.zIndex = "3";
     chapterThree2.style.display = "block";
     logo.style.display = "block";
-    chapterThree2.style.width = "92%";
+    chapterThree2.style.width = "82%";
     chapterThree2.style.top = "39%";
 }
 function showThreeChapter3() {
@@ -807,8 +808,8 @@ function showThreeChapter4() {
     chapterThree4.style.display = "block";
     logo.style.display = "block";
 
-    chapterThree4.style.width = "88%";
-    chapterThree4.style.top = "30%";
+    chapterThree4.style.width = "85%";
+    chapterThree4.style.top = "40%";
 
     // chapterThree4.style.right = "2%";   // הזיזי ימינה כמה שצריך
     // chapterThree4.style.left = "unset";
@@ -990,8 +991,12 @@ function showThreeChapterGame() {
     row2.className = 'yellow-row';
     row1.style.display = 'flex';
     row1.style.gap = '10px';
+    row1.style.alignItems = "stretch";
+
     row2.style.display = 'flex';
+
     row2.style.gap = '10px';
+    row2.style.alignItems = "stretch";
     yellowArea.appendChild(row1);
     yellowArea.appendChild(row2);
     yellowCardsData.forEach((text, i) => {
@@ -999,6 +1004,9 @@ function showThreeChapterGame() {
         card.className = 'yellow-card';
         card.textContent = text;
         card.dataset.value = text;
+        card.style.boxSizing = "border-box";
+        card.style.minHeight = "60px";
+
         card.style.pointerEvents = "auto";
         card.style.padding = "2vw 1vh";
         card.style.width = "10vw";
@@ -1011,8 +1019,15 @@ function showThreeChapterGame() {
 }
 
 function onDragStart(e) {
-    e.dataTransfer.setData('text/plain', e.currentTarget.dataset.key);
-    e.currentTarget.classList.add('dragging');
+    const card = e.currentTarget;
+
+    e.dataTransfer.setData('text/plain', card.dataset.key);
+
+    // שמירת מיקום מקורי
+    card.dataset.originalParentIndex = [...card.parentNode.children].indexOf(card);
+    card.dataset.originalParent = 'blue-area';
+
+    card.classList.add('dragging');
 }
 
 function onDragEnd(e) {
@@ -1045,16 +1060,49 @@ function onDrop(e) {
     };
 
     const targetCard = e.currentTarget; // שמירה על הכרטיס הצהוב
+    const rect = targetCard.getBoundingClientRect();
+    targetCard.style.width = rect.width + "px";
+    targetCard.style.height = rect.height + "px";
+    targetCard.style.flexShrink = "0";
     if (window.correctMap[draggedKey] === targetValue) {
         addIconAndText(true, targetCard);
     } else {
-        console.log("לא נכון!");
-        addIconAndText(false, targetCard); // מופיע עכשיו
+        const originalText = targetCard.textContent;
 
+        // הצמדת הכחול לצהוב
+        targetCard.textContent = blueCard.textContent;
+        targetCard.style.backgroundColor = "#ffe4a8";
+
+        blueCard.style.display = "none";
+
+        const icon = document.createElement("img");
+        icon.src = "media/FalseIcon.svg";
+        icon.classList.add("false-icon");
+        icon.style.position = "absolute";
+        icon.style.right = "6px";
+        icon.style.bottom = "6px";
+        targetCard.appendChild(icon);
+
+        // אחרי 2 שניות – חזרה למצב המקורי
         setTimeout(() => {
-            icon.style.display = "none";
-        }, 2000);
+            // החזרת הטקסט הצהוב
+            targetCard.textContent = originalText;
+            targetCard.style.backgroundColor = "";
+            icon.remove();
 
+            // החזרת הכרטיס הכחול למקום
+            blueCard.style.display = "block";
+
+            const blueArea = document.querySelector('.blue-area');
+            const index = Number(blueCard.dataset.originalParentIndex);
+
+            if (blueArea && !isNaN(index)) {
+                blueArea.insertBefore(
+                    blueCard,
+                    blueArea.children[index] || null
+                );
+            }
+        }, 2000);
     }
 }
 
@@ -1362,6 +1410,8 @@ function onDrop2(e) {
     const addIconAndText = (isCorrect, card) => {
         if (!blueCard || !card) return;
         if (isCorrect) {
+            card.style.width = "";
+            card.style.height = "";
             card.textContent = blueCard.textContent;
             card.style.backgroundColor = "#dbf6fa";
             blueCard.style.display = "none";
