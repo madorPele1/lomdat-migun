@@ -1995,12 +1995,17 @@ function showchpterFifthGame1() {
     logo.style.display = "block";
     chpterFifthGame1.style.display = "block";
     gameFifthAns.style.display = "none";
+    // gameFifthAns.style.top = "35%";
 
     const correctAnswer = "225 ס\"מ";
     const answers = ["225 ס\"מ", "235 ס\"מ", "230 ס\"מ"];
     gameContainer.style.display = "block";
     chpterFifthGame1.style.width = "80%";
     chpterFifthGame1.style.height = "auto";
+    chpterFifthGame1.style.top = "11%";
+    chpterFifthGame1.style.right = "1%";
+    chpterFifthGame1.style.left = "unset";
+    chpterFifthGame1.style.transform = "none";
 
     gameContainer.appendChild(chpterFifthGame1);
 
@@ -2045,8 +2050,16 @@ function showchpterFifthGame2() {
     const correctAnswer = "60";
     const answers = ["80", "40", "60"];
     gameContainer.style.display = "block";
+
     chpterFifthGame2.style.width = "80%";
     chpterFifthGame2.style.height = "auto";
+    chpterFifthGame2.style.top = "11%";
+    chpterFifthGame2.style.right = "1%";
+    chpterFifthGame2.style.left = "unset";
+    chpterFifthGame2.style.transform = "none";
+
+
+
     gameContainer.appendChild(chpterFifthGame2);
     answersContainer.style.display = "flex";
     gameContainer.appendChild(answersContainer);
@@ -2085,8 +2098,22 @@ function showchpterFifthGame3() {
     const correctAnswer = "180";
     const answers = ["200", "180", "190"];
     gameContainer.style.display = "block";
+
+
+
+
+
+    chpterFifthGame3.style.height = "auto";
+
+
     chpterFifthGame3.style.width = "80%";
     chpterFifthGame3.style.height = "auto";
+    chpterFifthGame3.style.top = "11%";
+    chpterFifthGame3.style.right = "1%";
+    chpterFifthGame3.style.left = "unset";
+    chpterFifthGame3.style.transform = "none";
+
+
     gameContainer.appendChild(chpterFifthGame3);
     answersContainer.style.display = "flex";
     gameContainer.appendChild(answersContainer);
